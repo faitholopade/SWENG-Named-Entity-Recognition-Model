@@ -17,23 +17,6 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
-  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-      </li>
-
-
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
 </nav>
 <br/>
 <br/>
@@ -47,26 +30,51 @@
             <br/>
             <select class="form-control" name="taskoption">
 			  <option selected>Select Task</option>
+        <option value="displacy_render">Displacy Render</option>
+        <option value="all">All</option>
 			  <option value="organization">Organization</option>
 			  <option value="person">Person</option>
 			  <option value="geopolitical">Geopolitical</option>
         <option value="money">Money</option>
+        <option value="cardinal">Cardinal</option>
+        <option value="date">Date</option>
+        <option value="time">Time</option>
+        <option value="product">Product</option>
+        <option value="tech_issue">Tech Issue</option>
+        <option value="non_tech_issue">Non Tech Issue</option>
+        <option value="tech_resolution">Tech Resolution</option>
+        <option value="non_tech_resolution">Non Tech Resolution</option>
+        <option value="hardware">Hardware</option>
+        <option value="software">Software</option>
+        <option value="spec">Spec</option>
+        <option value="short_form">Short Form</option>
+        <option value="ID">ID</option>
 			</select>
 			<br/>
             <button type="reset" class="btn btn-primary"><i class="fa fa-eraser"></i> Clear</button>
             <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
-         
         </div>
         </form>
     </div>
 
     <div class="container">
     	<div class="alert alert-success" role="alert">
+        {% if num_of_results > 0%}
         <p class="alert-heading">Result</p>
-        <p>Number of Records:{{num_of_results}}</p>
+        <p>Number of Records: {{num_of_results}}</p>
         <ul>{% for i in results %}
         	<li>{{i}}</li>
         	{%endfor %}
+        {% endif %}
+        {% if displacy_text != ""%}
+          <div class="row">
+          <div class="col-12">
+                  <div class="card px-5 mb-10 shadow-sm" id="custom_card2">
+                    <h4 class="mt-3" >Results: </h4>
+              <p>{{ displacy_text|markdown }}</p>
+            </div>
+          </div>
+        {% endif %}
     	</ul>
     	</div>
     </div>
