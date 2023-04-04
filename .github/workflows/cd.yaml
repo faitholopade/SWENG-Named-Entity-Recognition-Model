@@ -30,7 +30,7 @@ jobs:
           context: ./Software Implementations/Flask-API/
           file: ./Software Implementations/Flask-API/Dockerfile
           push: true
-          tags: testingCD/group-one-ner:latest
+          tags: testingcd/group-one-ner:latest
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
