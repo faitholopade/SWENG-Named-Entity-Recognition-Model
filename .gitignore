@@ -1,3 +1,6 @@
+#Spacy
+Software Implementations/Spacy/output
+
 #Mac
 .DS_Store
 
@@ -68,8 +71,16 @@ __pypackages__/
 .venv
 env/
 venv/
+venv2/
 ENV/
 env.bak/
 venv.bak/
 flask-venv/
+venv2/
+gpu_venv/
+cpu_venv/
+
+#Large vector files
+model-best/vocab/vectors
+model-last/vocab/vectors
 
