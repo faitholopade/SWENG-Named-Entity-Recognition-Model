@@ -1,9 +1,6 @@
-from flask import Flask,render_template,url_for,request
-import re
+from flask import Flask,render_template,request
 import pandas as pd
 import spacy
-from spacy import displacy
-import en_core_web_trf
 nlp = spacy.load('en_core_web_trf')
 
 app = Flask(__name__)
