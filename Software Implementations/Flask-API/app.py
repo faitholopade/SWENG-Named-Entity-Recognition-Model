@@ -22,24 +22,24 @@ def process():
         for ent in doc.ents:
             d.append((ent.label_, ent.text))
             df = pd.DataFrame(d, columns=('named entity', 'output'))
-            ORG_named_entity = df.loc[df['named entity'] == 'ORG']['output']
-            PERSON_named_entity = df.loc[df['named entity'] == 'PERSON']['output']
-            GPE_named_entity = df.loc[df['named entity'] == 'GPE']['output']
-            MONEY_named_entity = df.loc[df['named entity'] == 'MONEY']['output']
+            org_named_entity = df.loc[df['named entity'] == 'ORG']['output']
+            person_named_entity = df.loc[df['named entity'] == 'PERSON']['output']
+            gpe_named_entity = df.loc[df['named entity'] == 'GPE']['output']
+            money_named_entity = df.loc[df['named entity'] == 'MONEY']['output']
         if choice == 'organization':
-            results = ORG_named_entity
+            results = org_named_entity
             num_of_results = len(results)
         elif choice == 'person':
-            results = PERSON_named_entity
+            results = person_named_entity
             num_of_results = len(results)
         elif choice == 'geopolitical':
-            results = GPE_named_entity
+            results = gpe_named_entity
             num_of_results = len(results)
         elif choice == 'money':
-            results = MONEY_named_entity
+            results = money_named_entity
             num_of_results = len(results)
-		
-	
+
+
     return render_template("index.html",results=results,num_of_results = num_of_results)
 
 
