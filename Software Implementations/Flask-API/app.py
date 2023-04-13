@@ -1,5 +1,4 @@
-from flask import Flask,render_template,url_for,request
-import re
+from flask import Flask,render_template,request
 import pandas as pd
 import spacy
 from spacy import displacy
@@ -111,4 +110,4 @@ def process():
 
 
 if __name__ == '__main__':
-	app.run(host="0.0.0.0", debug=True)
+    app.run(host="0.0.0.0", debug=True)
