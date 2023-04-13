@@ -20,4 +20,5 @@ jobs:
         pip install pylint
     - name: Analysing the code with pylint
       run: |
-        pylint SwEng-Group-1-NER/Software\ Implementations/Flask-API/app.py
+        pylint SwEng-Group-1-NER.Software\ Implementations.Flask-API.app
+
