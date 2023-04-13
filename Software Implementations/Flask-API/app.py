@@ -5,7 +5,7 @@ import spacy
 from spacy import displacy
 import en_core_web_trf
 from flaskext.markdown import Markdown
-nlp = spacy.load('en_core_web_trf')
+nlp = spacy.load('../Spacy/output_cpu_kenneth/model-best')
 
 app = Flask(__name__)
 Markdown(app)
