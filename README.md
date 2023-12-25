@@ -1,30 +1,17 @@
-# SwEng-Group-1-NER
+# Dell Customer Support NER Project
 
-Named Entity Recognition (NER) involves automatically identifying and classifying named entities in text such as persons,
-places, and organizations. NER is import for Natural Language Processing (NLP) tasks such as Query Understanding (QU),
-Information Extraction (IE) and Question Answering (QA). Recent NER development efforts focus on deep learning
-approaches. There are large number of open-source NER models available online that provides out-of-the-box capabilities for
-entity detection.
-Building on open-source NER models, this project aims to train a foundational NER model tuned to Dell data to recognize
-important entities within customer support textual logs. The NER model should cater multiple use-cases:
+This repository contains the completed project for the Dell Customer Support Named Entity Recognition (NER) initiative. NER is a critical component in Natural Language Processing (NLP), essential for tasks like Query Understanding, Information Extraction, and Question Answering. Leveraging deep learning techniques, our project builds upon existing open-source NER models to create a specialized NER model designed for Dell's customer support text data.
 
-1) identification of Personal Identifiable Information (PII) such as person names [name], addresses/locations [location],
-phone numbers [phone], emails[email]
-2) various identifiers (such as order ids, invoice numbers, service ids etc.) [id]
-3) temporal information including relative dates/times (e.g. yesterday, a month from now) [relative_date], date/times (e.g.
-January, 11:45pm, 23-12-2021) [date_time]
-4) technical issues mentioned (e.g. Bluetooth not working) [tech_issue]
-5) non-technical issues mentioned (e.g. warranty update, dispatch delay) [non_tech_issue]
-5) possible resolutions for tech issues (e.g. reinstall windows) [tech_resolution]
-6) possible resolutions for non-tech issues (e.g. arrange alternative delivery) [non_tech_resolution]
-6) organizations or brands (e.g. microsoft, nvidia, dell) [org]
-7) hardware/product/consumer model (e.g. ac adapter, gpu, laptop, ram, speaker, xps 13, latitude 3350, xbox) [hardware]
-8) hardware or model specification (e.g. 13", intel i7, 15gb, 3w) [spec]
-9) software mentioned (e.g. windows, ms win, antivirus, adobe) [software]
-10) currencies ($1000, INR 12344) [currency]
-11) Abbreviation/Acronym (e.g. CX, MOBO, HDD, BSOD) [short_form]
+Key objectives of this NER model include:
 
-It is worthy to note that many state of the art open-source models such as Spacy, Flair etc. support most of the above
-entities. Moreover, open-source Python libraries exist for extracting some entities present in text such as phone numbers
-(https://pypi.org/project/phonenumbers/) and currencies (https://pypi.org/project/price-parser/ ).
-This project aims to leverage such open-source implementation for building a labelled dataset for training a Dell NER model.
+1) Detection of Personal Identifiable Information (PII) such as names, addresses, phone numbers, and email addresses.
+2) Recognition of various unique identifiers (order ids, invoice numbers, service ids, etc.).
+3) Identification of temporal expressions (dates, times, relative dates/times).
+4) Classification of technical and non-technical issues mentioned in customer support logs.
+5) Suggestion of possible solutions for both technical and non-technical issues.
+6) Identification of organizations, brands, and hardware/products/models mentioned.
+7) Recognition of hardware or model specifications.
+8) Identification of software names.
+9) Detection of currency values and abbreviations/acronyms.
+
+It's important to note that many leading open-source models (like Spacy, Flair) already support many of these entities. Additionally, Python libraries for extracting specific entities (e.g., phone numbers, currencies) are available and have been utilized in this project. The primary aim was to create a labeled dataset using these resources to train a Dell-specific NER model tailored for analyzing customer support interactions.
