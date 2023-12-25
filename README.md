@@ -15,3 +15,15 @@ Key objectives of this NER model include:
 9) Detection of currency values and abbreviations/acronyms.
 
 It's important to note that many leading open-source models (like Spacy, Flair) already support many of these entities. Additionally, Python libraries for extracting specific entities (e.g., phone numbers, currencies) are available and have been utilized in this project. The primary aim was to create a labeled dataset using these resources to train a Dell-specific NER model tailored for analyzing customer support interactions.
+
+## Group Members
+KARIM AL ABBASI
+MOHAMMAD AMMAR
+VARUN ANAND
+ADAORA ARINZE
+HAMZA BANA
+ADAM CUNNANE
+RUAIRI DONAGHEY
+EVA GAYNOR
+KENNETH HARMON
+FAITH OLOPADE
